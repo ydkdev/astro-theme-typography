@@ -30,7 +30,7 @@ function getUrl(slug: string) {
 }
 ---
 
-<LayoutDefault title={entry.data.title} desc={entry.data.description} banner={entry.data.banner}>
+<LayoutDefault title={entry.data.title} desc={entry.data.description} banner={entry.data.banner} showNav={false} showFooter={false}>
   <Post post={entry}>
     <Content />
   </Post>
@@ -44,7 +44,7 @@ function getUrl(slug: string) {
     showPageCount={false}
   />
   <!-- BUG 这里使用 client:visible 会导致构建失败。ref: https://github.com/withastro/astro/issues/7329 -->
-    <Comments post={entry} />
+
 </LayoutDefault>
 
 <script>

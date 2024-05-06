@@ -1,9 +1,11 @@
-import { defineConfig } from 'astro/config';
-import UnoCSS from 'unocss/astro';
+import { defineConfig } from "astro/config";
+import UnoCSS from "unocss/astro";
 import { THEME_CONFIG } from "./src/theme.config";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,17 +13,23 @@ export default defineConfig({
   prefetch: true,
   markdown: {
     shikiConfig: {
-      theme: 'one-dark-pro',
+      theme: "one-dark-pro",
       langs: [],
       wrap: true,
     },
   },
   integrations: [
     UnoCSS({
-      injectReset: true
+      injectReset: true,
     }),
     robotsTxt(),
     sitemap(),
-    mdx()
-  ]
+    mdx(),
+  ],
+  output: "hybrid",
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });

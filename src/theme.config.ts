@@ -1,39 +1,26 @@
-export const THEME_CONFIG: App.Locals['config'] = {
+export const THEME_CONFIG: App.Locals["config"] = {
   /** blog title */
-  title: "活版印字",
+  title: "ydk-blog",
   /** your name */
-  author: "Typography",
+  author: "ydk",
   /** website description */
-  desc: "Rediscory the beauty of typography",
+  desc: "the blog of a tech-devoted coder",
   /** your deployed domain */
-  website: "https://astro-theme-typography.vercel.app/",
+  website: "https://ydk.zone",
   /** your locale */
-  locale: "en-us",
+  locale: "zh-cn",
   /** theme style */
-  themeStyle: "light",
+  themeStyle: "auto",
   /** your socials */
   socials: [
     {
       name: "github",
-      href: "https://github.com/moeyua/astro-theme-typography",
+      href: "https://github.com/ydkdev",
     },
-    {
-      name: "rss",
-      href: "/atom.xml",
-    },
-    {
-      name: "twitter",
-      href: "https://github.com/moeyua/astro-theme-typography",
-    },
-    {
-      name: "mastodon",
-      href: "https://github.com/moeyua/astro-theme-typography",
-    }
   ],
   /** your header info */
-  header: {
-    twitter: "@moeyua13",
-  },
+  header: {},
+
   /** your navigation links */
   navs: [
     {
@@ -46,7 +33,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
     },
     {
       name: "Categories",
-      href: "/categories"
+      href: "/categories",
     },
     {
       name: "About",
@@ -54,9 +41,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
     },
   ],
   /** your category name mapping, which the `path` will be shown in the url */
-  category_map: [
-    { name: "胡适", path: "hu-shi" },
-  ],
+  category_map: [],
   /** your comment provider */
   comments: {
     disqus: {
@@ -79,6 +64,5 @@ export const THEME_CONFIG: App.Locals['config'] = {
     // twikoo: {
     //   envId: "https://twikoo-tau-flame.vercel.app",
     // }
-  }
-}
-
+  },
+};
