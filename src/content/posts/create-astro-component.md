@@ -60,7 +60,7 @@ function handleClick() {
 }
 ---
 
-<!-- ❌ This doesn't work! ❌ -->
+<!--  This doesn't work! -->
 <button onClick={handleClick}>Nothing will happen when you click me!</button>
 ```
 
